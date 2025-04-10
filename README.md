@@ -125,3 +125,50 @@ This system is designed with security and compliance in mind:
 - Secure API endpoints
 - Data encryption
 - Regular security audits
+
+## Deployment
+
+### Docker Deployment
+The project includes Docker configuration for easy deployment:
+
+```bash
+# Build and run all services
+docker-compose up --build
+
+# Run in background
+docker-compose up -d
+
+# Stop all services
+docker-compose down
+```
+
+### Environment Variables
+Copy the example environment files and update them with your settings:
+```bash
+cp .env.example .env
+cp frontend/.env.example frontend/.env
+```
+
+### Production Deployment
+1. Update environment variables for production
+2. Build frontend for production: `cd frontend && npm run build`
+3. Use a production-grade WSGI server for the backend
+4. Set up SSL/TLS certificates
+5. Configure reverse proxy (e.g., Nginx)
+
+## CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+### Automated Workflows
+- Code linting and style checks
+- Unit tests for backend and frontend
+- Integration tests
+- Security vulnerability scanning
+- Automated deployments to staging/production
+
+### Quality Gates
+- All tests must pass
+- Code coverage requirements
+- Security scan results
+- Performance benchmarks
