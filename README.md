@@ -156,16 +156,7 @@ cp frontend/.env.example frontend/.env
 4. Set up SSL/TLS certificates
 5. Configure reverse proxy (e.g., Nginx)
 
-## CI/CD
 
-This project uses GitHub Actions for continuous integration and deployment:
-
-### Automated Workflows
-- Code linting and style checks
-- Unit tests for backend and frontend
-- Integration tests
-- Security vulnerability scanning
-- Automated deployments to staging/production
 
 ### Quality Gates
 - All tests must pass
