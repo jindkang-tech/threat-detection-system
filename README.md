@@ -39,15 +39,84 @@ An advanced threat detection system leveraging AI/ML for real-time threat detect
 
 ## Setup Instructions
 
-[To be added]
+### Prerequisites
+- Python 3.8+
+- Node.js 14+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/jindkang-tech/threat-detection-system.git
+cd threat-detection-system
+```
+
+2. Set up the backend:
+```bash
+cd backend
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
+```
+
+3. Set up the frontend:
+```bash
+cd frontend
+npm install
+npm start
+```
 
 ## Development
 
-[To be added]
+### Mock Data Integration
+The system currently uses mock data services for development and testing. This allows for:
+- Rapid development without requiring actual threat data
+- Testing of various scenarios and edge cases
+- Development of UI components with realistic data
+
+### API Endpoints
+
+#### Alerts
+- `GET /alerts` - List all alerts
+- `GET /alerts/{alert_id}` - Get specific alert details
+- `GET /alerts/statistics` - Get alert statistics
+- `PUT /alerts/{alert_id}/status` - Update alert status
+
+#### Threats
+- `GET /threats` - List detected threats
+- `GET /threats/{threat_id}` - Get specific threat details
+
+#### Models
+- `GET /models` - List available ML models
+- `GET /models/{model_id}` - Get specific model details
+
+### Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## Testing
 
-[To be added]
+### Backend Testing
+```bash
+cd backend
+python -m pytest
+```
+
+### Frontend Testing
+```bash
+cd frontend
+npm test
+```
+
+### End-to-End Testing
+E2E tests can be run using Cypress:
+```bash
+cd frontend
+npm run e2e
+```
 
 ## Security & Compliance
 
